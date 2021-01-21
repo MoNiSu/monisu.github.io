@@ -9,9 +9,16 @@
   <body>
     <header>
       <a class="user_logo" href="/">MoNiSu</a>
-      <div class="empty"></div>
-    </header>
+      <button class="list_button" onclick="makeListVisible();">
+        <img class="list_button_img" src="./assets/img/list_visible.png" />
+      </button>
+    </header> 
     <main></main>
+    <aside id="list" class="list hidden">
+      <button class="list_button" onclick="makeListInvisible();">
+        <img class="list_button_img" src="./assets/img/list_invisible.png" />
+      </button>
+    </aside>
     <footer>
       <div class="my_info">
         <div class="email">
