@@ -1,9 +1,11 @@
-const list = document.getElementById('list');
+const list = document.querySelector('.list');
 
 function makeListVisible () {
-  list.classList.remove('hidden');
+  list.style.transition = '0.3s';
+  list.style.transform = "translate(-350px, 0px)";
 }
 
 function makeListInvisible () {
-  list.classList.add('hidden');
+  list.style.transition = '0.3s';
+  list.style.transform = "translate(350px, 0px)";
 }
