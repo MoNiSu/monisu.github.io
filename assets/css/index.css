@@ -8,11 +8,11 @@ a {
   text-decoration: none;
 }
 
-html, body {
+html {
   height: 100%;
 }
 
-#wrap {
+body {
   height: 120%;
   display: flex;
   flex-direction: column;
