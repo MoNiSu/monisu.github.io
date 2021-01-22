@@ -1,14 +1,14 @@
-const list = document.querySelector('.list');
-const layer = document.querySelector('.layer');
+const menu = document.querySelector('.menu');
+const menuLayer = document.querySelector('.menu_layer');
 
-function makeListVisible () {
-  list.style.transition = '0.3s';
-  list.style.transform = "translate(-350px, 0px)";
-  layer.classList.remove('hidden');
+function openMenu () {
+  menu.style.transition = '0.3s';
+  menu.style.transform = "translate(-350px, 0px)";
+  menuLayer.classList.remove('hidden');
 }
 
-function makeListInvisible () {
-  list.style.transition = '0.3s';
-  list.style.transform = "translate(350px, 0px)";
-  layer.classList.add('hidden');
+function closeMenu () {
+  menu.style.transition = '0.3s';
+  menu.style.transform = "translate(350px, 0px)";
+  menuLayer.classList.add('hidden');
 }

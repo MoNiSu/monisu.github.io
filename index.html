@@ -9,14 +9,14 @@
   <body>
     <header>
       <a class="user_logo" href="/">MoNiSu</a>
-      <button class="list_button" onclick="makeListVisible();">
-        <img class="list_button_img" src="./assets/img/list_visible.png" />
+      <button class="menu_button" onclick="openMenu();">
+        <img class="menu_button_img" src="./assets/img/open_menu_button.png" />
       </button>
     </header> 
     <main></main>
-    <aside class="list">
-      <button class="list_button" onclick="makeListInvisible();">
-        <img class="list_button_img" src="./assets/img/list_invisible.png" />
+    <aside class="menu">
+      <button class="menu_button" onclick="closeMenu();">
+        <img class="menu_button_img" src="./assets/img/close_menu_button.png" />
       </button>
     </aside>
     <footer>
@@ -39,7 +39,7 @@
         Copyright © MoNiSu All Rights Reserved.
       </div>
     </footer>
-    <div class="layer hidden" onclick="makeListInvisible();"></div>
+    <div class="menu_layer hidden" onclick="closeMenu();"></div>
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
