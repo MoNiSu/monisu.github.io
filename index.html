@@ -3,25 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MoNiSu</title>
+    <import href="./includes/title.html"></import>
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
   <body>
-    <header>
-      <a class="user_logo" href="/">MoNiSu</a>
-      <button class="menu_button" onclick="openMenu();">
-        <img class="menu_button_img" src="./assets/img/open_menu_button.png" />
-      </button>
-    </header>
-    <nav class="menu">
-      <button class="menu_button" onclick="closeMenu();">
-        <img class="menu_button_img" src="./assets/img/close_menu_button.png" />
-      </button>
-      <a class="home_button menu_button" href="/">
-        <img class="menu_button_img" src="./assets/img/home_button.png" />
-      </a>
-    </nav>
-    <div class="menu_layer hidden" onclick="closeMenu();"></div>
+    <import href="./includes/header.html"></import>
+    <import href="./includes/nav.html"></import>
     <main>
       <article class="greeting">
         <h1>안녕하세요. 블로그에 오신 것을 환영합니다.</h1>
@@ -30,26 +17,8 @@
         <p>방문해 주셔서 감사합니다.</p>
       </article>
     </main>
-    <footer>
-      <div class="my_info">
-        <div class="email">
-          Email:
-          <a class="email_address" href="mailto:admin@mail.monisu.kr">
-            admin@mail.monisu.kr
-          </a>
-        </div>
-        <div class="info_separator">|</div>
-        <div class="github">
-          Github:
-          <a class="github_address" href="https://github.com/MoNiSu">
-            https://github.com/MoNiSu
-          </a>
-        </div>
-      </div>
-      <div class="copyright">
-        Copyright © MoNiSu All Rights Reserved.
-      </div>
-    </footer>
+    <import href="./includes/footer.html"></import>
+    <script src="./assets/js/includeHTML.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
