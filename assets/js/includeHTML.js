@@ -26,7 +26,7 @@ function includeHTML () {
           }
 
           element[i].remove();
-          importHTML();
+          includeHTML();
         }
       }
 
