@@ -3,13 +3,13 @@
 
 function openNav (nav, navLayer) {
   nav.style.transition = '0.3s';
-  nav.style.transform = `translate( ${nav.offsetWidth * -1}px, 0px )`;
+  nav.style.transform = `translate( -200px, 0px )`;
   navLayer.classList.remove('hidden');
 }
 
 function closeNav (nav, navLayer) {
   nav.style.transition = '0.3s';
-  nav.style.transform = `translate( ${nav.offsetWidth}px, 0px )`;
+  nav.style.transform = `translate( 200px, 0px )`;
   navLayer.classList.add('hidden');
 }
 
