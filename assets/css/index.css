@@ -63,10 +63,10 @@ main {
   align-items: center;
 }
 
-article {
+.greeting {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 nav {
