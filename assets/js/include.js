@@ -1,4 +1,13 @@
-function includeHTML () {
+const INDEX_JS_PATH = '/assets/js/index.js';
+
+function loadScript (path) {
+  let newScript = document.createElement('script');
+
+  newScript.setAttribute('src', path);
+  document.body.appendChild(newScript);
+}
+
+function include () {
   let element = document.getElementsByTagName('include');
 
   for (let i = 0; i < element.length; i++) {
@@ -16,7 +25,7 @@ function includeHTML () {
           }
 
           element[i].remove();
-          includeHTML();
+          include();
         }
       }
 
@@ -26,6 +35,10 @@ function includeHTML () {
       return;
     }
   }
+
+  loadScript(INDEX_JS_PATH);
 }
 
-includeHTML();
+window.onload = function () {
+  include();
+}

@@ -1,25 +1,69 @@
-// const nav = document.querySelector('nav');
-// const navLayer = document.querySelector('.nav_layer');
+const nav = document.querySelector('nav');
+const navLayer = document.querySelector('.nav_layer');
+const openNavButton = document.querySelector('.open_nav_button');
 
-function openNav (nav, navLayer) {
-  nav.style.transition = '0.3s';
-  nav.style.transform = `translate( -200px, 0px )`;
+const PATH_SEPARATOR = '/';
+
+const nowURI = window.location.pathname;
+
+function checkLocation () {
+  if (nowURI === '/') {
+    return 'home';
+  } else {
+    let firstURI = nowURI.split(PATH_SEPARATOR)[1];
+
+    switch (firstURI) {
+      case 'posts':
+        return 'post';
+      default:
+        return 'home';
+    }
+  }
+}
+
+function changeNavButtonColor () {
+  let nowURIButton = document.querySelector(`.${checkLocation()}_button`);
+
+  nowURIButton.classList.add('focused');
+}
+
+function isNavOpened() {
+  if (nav.classList.contains('move_nav_left')) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function openNav () {
+  if (nav.classList.contains('move_nav_right')) {
+    nav.classList.replace('move_nav_right', 'move_nav_left');
+  } else {
+    nav.classList.add('move_nav_left');
+  }
+
+  openNavButton.classList.add('focused');
   navLayer.classList.remove('hidden');
 }
 
-function closeNav (nav, navLayer) {
-  nav.style.transition = '0.3s';
-  nav.style.transform = `translate( 200px, 0px )`;
+function closeNav () {
+  nav.classList.replace('move_nav_left', 'move_nav_right');
+  openNavButton.classList.remove('focused');
   navLayer.classList.add('hidden');
 }
 
 function changeNavStatus () {
-  let nav = document.querySelector('nav');
-  let navLayer = document.querySelector('.nav_layer');
-
-  if (navLayer.classList.contains('hidden')) {
-    openNav(nav, navLayer);
+  if (isNavOpened()) {
+    closeNav();
   } else {
-    closeNav(nav, navLayer);
+    openNav();
   }
 }
+
+function addEvents () {
+  openNavButton.addEventListener('click', changeNavStatus);
+}
+
+changeNavButtonColor();
+addEvents();
+
