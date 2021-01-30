@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MoNiSu</title>
     <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/home.css" />
   </head>
   <body>
     <include href="/includes/header.html"></include>
     <include href="/includes/nav.html"></include>
     <main>
-      <article class="greeting">
-        <h1>블로그에 오신 것을 환영합니다.</h1>
-        <div class="empty"></div>
-        <p>안녕하세요. 블로그 주인장인 모니모니수라고 합니다.</p>
-        <p>천천히 구경하시다가 가셔도 됩니다.</p>
-        <p>방문해 주셔서 감사합니다.</p>
-      </article>
+      <div class="home_clock">
+        <div class="hours_second_digit clock_digit"></div>
+        <div class="hours_first_digit clock_digit"></div>
+        <div class="clock_seperator">:</div>
+        <div class="minutes_second_digit clock_digit"></div>
+        <div class="minutes_first_digit clock_digit"></div>
+        <div class="clock_seperator">:</div>
+        <div class="seconds_second_digit clock_digit"></div>
+        <div class="seconds_first_digit clock_digit"></div>
+      </div>
     </main>
     <include href="/includes/footer.html"></include>
     <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/home.js"></script>
     <noscript>
       현재 사용 중인 브라우저는 스크립트를 지원하지 않거나, 해당 기능이 활성화되어 있지 않습니다!
     </noscript>

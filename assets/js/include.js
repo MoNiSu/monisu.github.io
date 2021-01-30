@@ -5,6 +5,8 @@ function loadScript (path) {
 
   newScript.setAttribute('src', path);
   document.body.appendChild(newScript);
+
+  return;
 }
 
 function include () {
@@ -37,8 +39,12 @@ function include () {
   }
 
   loadScript(INDEX_JS_PATH);
+
+  return;
 }
 
 window.onload = function () {
   include();
+
+  return;
 }

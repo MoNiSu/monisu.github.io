@@ -25,6 +25,8 @@ function changeNavButtonColor () {
   let nowURIButton = document.querySelector(`.${checkLocation()}_button`);
 
   nowURIButton.classList.add('focused');
+
+  return;
 }
 
 function isNavOpened() {
@@ -44,12 +46,16 @@ function openNav () {
 
   openNavButton.classList.add('focused');
   navLayer.classList.remove('hidden');
+
+  return;
 }
 
 function closeNav () {
   nav.classList.replace('move_nav_left', 'move_nav_right');
   openNavButton.classList.remove('focused');
   navLayer.classList.add('hidden');
+
+  return;
 }
 
 function changeNavStatus () {
@@ -58,10 +64,14 @@ function changeNavStatus () {
   } else {
     openNav();
   }
+
+  return;
 }
 
 function addEvents () {
   openNavButton.addEventListener('click', changeNavStatus);
+
+  return;
 }
 
 changeNavButtonColor();
