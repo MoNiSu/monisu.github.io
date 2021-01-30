@@ -47,7 +47,7 @@ function changeClock (time) {
       changeClockNumber(firstDigit, time.amount % 10);
     } else {
       if (parseInt(clockTime / 10) !== 0) {
-        secondDigit.innerHTML = 0;
+        changeClockNumber(secondDigit, 0);
       }
 
       changeClockNumber(firstDigit, time.amount);
