@@ -19,9 +19,8 @@ body {
   background-color: rgba(0, 0, 0, 255);
 }
 
-button {
-  border: unset;
-  background-color: rgba(0, 0, 0, 0);
+a {
+  text-decoration: none;
 }
 
 
@@ -42,10 +41,6 @@ header {
   font-family: 'Shadows Into Light';
   font-size: 2rem;
   color: rgba(255, 255, 255, 255);
-}
-
-.logo:hover {
-  cursor: pointer;
 }
 
 /* Main */
